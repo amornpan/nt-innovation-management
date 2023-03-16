@@ -6,6 +6,10 @@ openai.api_key = OPENAI_API_KEY
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello():
+    return render_template('index.html')
+
 @app.route('/generate_report', methods=['POST'])
 def generate_report():
     topic = request.json['topic']
