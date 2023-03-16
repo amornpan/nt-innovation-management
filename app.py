@@ -1,5 +1,6 @@
 import openai
 from flask import Flask, request, jsonify
+from flask import render_template
 
 OPENAI_API_KEY = "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" # Replace with your API key
 openai.api_key = OPENAI_API_KEY
